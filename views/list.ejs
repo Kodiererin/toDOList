@@ -1,0 +1,24 @@
+<%- include("header") -%>
+
+    <div class="box" id="heading">
+        <!-- <h1>I am learning Express JS</h1> -->
+
+        <!-- Instead of lastTitle there was kindOfDay -->
+        <h1><%= listTitle %> </h1>
+    </div>
+
+    <div class="box">
+       <% for(let i=0 ; i<newlistItems.length ; i++) {%>
+            <div class="item">
+                <input type="checkbox" name="" id="">
+                <p><%= newlistItems[i] %></p>
+            </div>
+       <% } %>
+       
+       
+       <form action="/" method="post" class="item">           
+           <input type="text" name="newItem" id="" placeholder="New Item" autocomplete="off">
+           <Button type="submit" name="list" value=<%= listTitle %>> + </Button>
+        </form>
+    </div>
+    <%- include("footer") -%>
